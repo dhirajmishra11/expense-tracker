@@ -1,12 +1,10 @@
 import { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { useNavigate, Link } from 'react-router-dom';
-import Register from './Register';
 
 export default function Login() {
   const { login, error } = useAuth();
   const navigate = useNavigate();
-  const [isLogin, setIsLogin] = useState(true);
   const [formData, setFormData] = useState({
     email: '',
     password: ''
@@ -19,10 +17,6 @@ export default function Login() {
       navigate('/dashboard');
     }
   };
-
-  if (!isLogin) {
-    return <Register onToggleForm={() => setIsLogin(true)} />;
-  }
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-primary-50">
@@ -71,12 +65,12 @@ export default function Login() {
           </div>
         </form>
         <div className="text-center">
-          <button
-            onClick={() => setIsLogin(false)}
+          <Link
+            to="/register"
             className="text-primary-600 hover:text-primary-800 text-sm font-medium transition-colors duration-200"
           >
             Need an account? Register
-          </button>
+          </Link>
         </div>
       </div>
     </div>
