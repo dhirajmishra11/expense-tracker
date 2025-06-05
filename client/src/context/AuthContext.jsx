@@ -1,5 +1,6 @@
 import { createContext, useContext, useState, useCallback, useEffect } from 'react';
 import axios from 'axios';
+axios.defaults.baseURL = 'https://expense-tracker-backend-mg8o.onrender.com';
 import toast from 'react-hot-toast';
 
 const AuthContext = createContext();
