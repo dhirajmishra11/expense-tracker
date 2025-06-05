@@ -4,8 +4,10 @@ const { validationResult } = require('express-validator');
 
 exports.register = async (req, res) => {
   try {
+    console.log('Register Request Body:', req.body); // Debugging line to check request body
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
+      console.log('Validation Errors:', errors.array()); // Debugging line to check validation errors
       return res.status(400).json({ errors: errors.array() });
     }
 

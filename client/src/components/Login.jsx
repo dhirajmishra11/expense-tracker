@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { useNavigate, Link } from 'react-router-dom';
+import logo from '../images/logo.png';
 
 export default function Login() {
   const { login, error } = useAuth();
@@ -22,7 +23,7 @@ export default function Login() {
     <div className="min-h-screen flex items-center justify-center bg-primary-50">
       <div className="max-w-md w-full space-y-8 p-8 bg-white rounded-lg shadow-xl">
         <div className="text-center">
-          <img src="/src/images/logo.png" alt="Logo" className="h-12 w-auto mx-auto mb-4" />
+          <img src={logo}  alt="Logo" className="h-12 w-auto mx-auto mb-4" />
           <h2 className="text-3xl font-bold text-gray-900">Sign in</h2>
           {error && (
             <div className="mt-4 bg-secondary-100 border border-secondary-200 text-secondary-700 px-4 py-3 rounded">
