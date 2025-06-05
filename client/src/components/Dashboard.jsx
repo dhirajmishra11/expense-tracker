@@ -3,6 +3,8 @@ import AddExpense from './AddExpense';
 import ExpenseList from './ExpenseList';
 import Chart from './Chart';
 import Filters from './Filters';
+import logo from '../images/logo.png';
+
 
 export default function Dashboard() {
   const { logout } = useAuth();
@@ -13,7 +15,7 @@ export default function Dashboard() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <img src="/src/images/logo.png" alt="Logo" className="h-8 w-auto" />
+              <img src={logo} alt="Logo" className="h-8 w-auto" />
               <span className="ml-2 text-xl font-bold text-primary-600">ExpenseTracker</span>
             </div>
             <button
