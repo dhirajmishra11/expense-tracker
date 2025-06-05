@@ -1,3 +1,8 @@
+## 🚀 Live Demo
+
+🔗 [Click here to view the live site](https://expense-tracker-as4o.onrender.com)
+
+
 # Expense Tracker
 
 A full-stack expense tracking application built with MERN stack (MongoDB, Express.js, React, Node.js)
