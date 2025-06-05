@@ -11,10 +11,14 @@ connectDB();
 
 // Middleware
 app.use(cors({
-  origin: 'http://localhost:5173', // or your frontend URL
-  exposedHeaders: ['Content-Disposition'] // Important for file downloads
+  origin: [
+    'http://localhost:5173',
+    'https://expense-tracker-as4o.onrender.com'
+  ],
+  credentials: true,
+  exposedHeaders: ['Content-Disposition']
 }));
-app.use(express.json());
+
 
 // Routes
 app.use('/api/auth', require('./routes/authRoutes'));

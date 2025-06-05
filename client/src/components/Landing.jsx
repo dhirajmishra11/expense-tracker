@@ -1,4 +1,10 @@
 import { Link } from "react-router-dom";
+import logo from '../images/logo.png';
+import landingpg2 from '../images/landingpg2.png';
+import landing1 from '../images/landignpg1.png';
+
+
+
 
 export default function Landing() {
   const handleLearnMore = () => {
@@ -16,7 +22,7 @@ export default function Landing() {
           <div className="flex justify-between items-center">
             <div className="flex items-center">
               <img
-                src="/src/images/logo.png"
+                src={logo}
                 alt="Logo"
                 className="h-10 w-auto"
               />
@@ -72,7 +78,7 @@ export default function Landing() {
             </div>
             <div className="hidden lg:block">
               <img
-                src="/src/images/landignpg1.png"
+                src={landing1}
                 alt="Dashboard Preview"
                 className="w-full max-h-96 object-cover  rounded-lg shadow-xl"
               />
@@ -117,7 +123,7 @@ export default function Landing() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <img
-                src="/src/images/landingpg2.png"
+                src={landingpg2}
                 alt="App Preview"
                 className="w-full max-h-96 object-cover rounded-lg shadow-xl"
               />
@@ -151,7 +157,7 @@ export default function Landing() {
             <div>
               <div className="flex items-center mb-4">
                 <img
-                  src="/src/images/logo.png"
+                  src={logo}
                   alt="Logo"
                   className="h-8 w-auto"
                 />
